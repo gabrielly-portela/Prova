@@ -1,6 +1,63 @@
-teste 
+#include<stdio.h>
+#include <math.h>
 
+int main() {
+ 
+  char questao; 
+  float catetoOposto, catetoAdjacente,  hipotenusa, seno, x;
+  	int anoNascimento;
+	char nome [30];
 
-prova 
-printf
+ printf("Nome da disciplica: Algoritmo e Programacao\n");
+	printf("Nome da professora: Joyce Siqueira\n");
+	printf("Nome do aluno: Gabrielly de Souza Portela\n");
+	printf("Matricula: UC22200274\n");
+	printf("Curso: ADS\n");
+	printf("Link GitHub: https://github.com/gabrielly-portela\n");
+	printf("Software utilizado: DevC++\n");
+	
+	
+  printf("Escolha a questao que deseja: A ou B: \n");
+  scanf("%c", &questao);
+ 
+  switch (questao){
+    case 'A':
+      printf ("Questao escolhida foi: A\n", questao);
+        printf("Digite o Cateto oposto a: \n", catetoOposto);
+      	scanf("%f", &catetoOposto);
+      	printf("Digite o Cateto adjacente b: \n", catetoAdjacente);
+      	scanf("%f", &catetoAdjacente);
+
+      x=catetoOposto*catetoOposto+catetoAdjacente*catetoAdjacente;
+      hipotenusa=sqrt(x); 
+      seno=catetoOposto/hipotenusa;
+
+      printf("Hipotenusa: %.3f\n", hipotenusa);
+      printf("Seno: %.3f\n", seno);
+      break;
+      			 
+
+    case 'B':
+   	printf("Digite seu ano de Nascimento: \n");
+	scanf("%d", &anoNascimento);
+	printf("Digite o seu nome: \n");
+	scanf("%s", &nome);
+		if(anoNascimento%4==0){	
+		printf("O seu ano e bissexto");
+
+}
+	else if (anoNascimento%100==0 && anoNascimento%400==0){
+		printf("O seu ano e bissexto");
+}
+ 	 else{
+ 		printf("O seu ano NAO e bissexto");
+}  
+  	 break;
+	 
+	 default:
+      printf("Opcao invalida\n");
+	 
+}
+  return 0;
+}
 
